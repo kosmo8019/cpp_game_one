@@ -1,0 +1,6 @@
+﻿  Fbullsandcows.cpp
+c:\users\szymon\desktop\section_2\bullsancows\fbullsandcows.h(2): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  main.cpp
+c:\users\szymon\desktop\section_2\bullsancows\fbullsandcows.h(2): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  Generating Code...
+  bullsancows.vcxproj -> C:\Users\Szymon\Desktop\Section_2\x64\Debug\bullsancows.exe
