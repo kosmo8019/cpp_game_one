@@ -2,12 +2,14 @@
 #include<string>
 #include"Fbullsandcows.h"
 
+using FText = std::string;
+using int32 = int;
 
 
 void PrintIntroMassage();
 void PlayGame();
-std::string GetGuess();
-void PrintGuess(std::string);
+FText GetGuess();
+void PrintGuess(FText);
 bool AskToPlayAgain();
 
 
@@ -26,7 +28,17 @@ int main()
 
 }
 
+//****************************************************************************************
+//introduce game
+void PrintIntroMassage()
+{
 
+	constexpr int32 W_LENGHT = 5;
+	std::cout << "WELCOME TO BULLS AND COWS GAME" << std::endl;
+	std::cout << "YOU NEED TO GUES " << W_LENGHT << " LETTER ISOGRAM.\n";
+	return;
+
+}
 
 
 
@@ -35,33 +47,24 @@ int main()
 void PlayGame()
 {
 	FBullCowGame BCGame; //instantiate a new game
-	int MaxTries = BCGame.GetMaxTries();
+	int32 MaxTries = BCGame.GetMaxTries();
 	std::cout << MaxTries << std::endl;
 
-	for (int GuessNumber = 0; GuessNumber < MaxTries; GuessNumber++)
+	for (int32 GuessNumber = 0; GuessNumber < MaxTries; GuessNumber++)
 	{
-		std::string GuessReturn = GetGuess();  //TODO vald guess
+		FText GuessReturn = GetGuess();  //TODO valid guess
 		//print numbers
 		PrintGuess(GuessReturn);
 		std::cout << std::endl;
 	}
 }
 
-//****************************************************************************************
-//introduce game
-void PrintIntroMassage() {
 
-	constexpr int W_LENGHT = 5;
-	std::cout << "WELCOME TO BULLS AND COWS GAME" << std::endl;
-	std::cout << "YOU NEED TO GUES " << W_LENGHT << " LETTER ISOGRAM.\n";
-	return;
-
-}
 
 //****************************************************************************************
 //get a guess from the player
-std::string GetGuess(){
-	std::string Guess = "";
+FText GetGuess(){
+	FText Guess = "";
 	std::cout<<"Try "<< BCGame.GetCurrentTry() << ".   WRITE THE WORD --->  ";
 	std::getline(std::cin, Guess);
 	return Guess;
@@ -69,7 +72,7 @@ std::string GetGuess(){
 
 //*****************************************************************************************
 //print word
-void PrintGuess(std::string Guess) {
+void PrintGuess(FText Guess) {
 	std::cout << "\n";
 	std::cout << "Your guess was : " << Guess << std::endl;
 }
@@ -78,9 +81,8 @@ void PrintGuess(std::string Guess) {
 bool AskToPlayAgain()
 {
 	std::cout << "Do you want play again?";
-	std::string Response = "";
+	FText Response = "";
 	std::getline(std::cin, Response);
-	//std::cout<< "Your response is  " << (Response[0]==('y' || 'Y'))<<std::endl;
 	return (Response[0] == 'y') || (Response[0] == 'Y');
 	
 }

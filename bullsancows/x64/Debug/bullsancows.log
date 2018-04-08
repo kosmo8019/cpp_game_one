@@ -1,6 +1,8 @@
 ﻿  Fbullsandcows.cpp
-c:\users\szymon\desktop\section_2\bullsancows\fbullsandcows.h(2): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-  main.cpp
-c:\users\szymon\desktop\section_2\bullsancows\fbullsandcows.h(2): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+e:\kurs c++_unreal\section_2\cpp_game_one\bullsancows\fbullsandcows.h(2): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+e:\kurs c++_unreal\section_2\cpp_game_one\bullsancows\fbullsandcows.cpp(31): error C2064: term does not evaluate to a function taking 0 arguments
   Generating Code...
-  bullsancows.vcxproj -> C:\Users\Szymon\Desktop\Section_2\x64\Debug\bullsancows.exe
+  Compiling...
+  main.cpp
+e:\kurs c++_unreal\section_2\cpp_game_one\bullsancows\fbullsandcows.h(2): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  Generating Code...
